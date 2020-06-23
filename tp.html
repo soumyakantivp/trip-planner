@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="tp.css">
+    <title>Document</title>
+
+</head>
+
+<body onload="changeimage(5)">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="tp.js"></script>
+    <div class="container">
+        
+        <div class="btn">
+            <button onclick="login()" class="button">log in</button><button
+                onclick="" class="button">sign up</button>
+        </div>
+        <div class="nav">
+            <button class="r1" onclick="background1();rs1()"></button>
+            <button class="r2" onclick="background2();rs2()"></button>
+            <button class="r3" onclick="background3();rs3()"></button>
+        </div>
+        <form class="display">
+            <img id="user" src="user2.png" width="32px" height="31px">
+            <img id="lock" src="lock.png" width="25px" height="28px">
+            <div class="lbtn"></div>
+        </form>
+        <div class="content">buy yourself the freedom</div>
+    </div>
+    <script>
+        function myFunction(x) {
+            if (x.matches) { // If media query matches
+                document.getElementsByClassName("button")[0].style.width = "130px";
+                document.getElementsByClassName("button")[1].style.width = "130px";
+                document.getElementsByClassName("content")[0].style.marginTop = "5px";
+            }
+        }
+
+        var x = window.matchMedia("(max-width: 700px)")
+        myFunction(x) // Call listener function at run time
+        x.addListener(myFunction) // Attach listener function on state changes
+
+        function Function(y) {
+            if (y.matches) { // If media query matches
+                document.getElementsByClassName("button")[0].style.width = "150px";
+                document.getElementsByClassName("button")[1].style.width = "150px";
+                document.getElementsByClassName("content")[0].style.marginTop = "12px";
+            }
+        }
+
+        var y = window.matchMedia("(min-width: 700px)")
+        Function(y) // Call listener function at run time
+        y.addListener(Function) // Attach listener function on state changes
+
+    </script>
+    <script type='text/javascript'>
+        var imageID = 0;
+        function changeimage(every_seconds) {
+            //change the image
+            if (!imageID) {
+                document.body.style.backgroundImage = "url('bg1.jpg')";
+                rs1();
+                background1();
+                imageID++;
+            }
+            else {
+                if (imageID == 1) {
+                    document.body.style.backgroundImage = "url('bg2.webp')";
+                    rs2();
+                    background2();
+                    imageID++;
+                } else {
+                    if (imageID == 2) {
+                        document.body.style.backgroundImage = "url('bg3.webp')";
+                        rs3();
+                        background3();
+                        imageID = 0;
+                    }
+                }
+            }
+            //call same function again for x of seconds
+            setTimeout("changeimage(" + every_seconds + ")", ((every_seconds) * 1000));
+        }
+    </script>
+
+</body>
+
+</html>

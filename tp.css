@@ -1,0 +1,146 @@
+body {
+    background-color: cornflowerblue;
+    position:absolute;
+    background: url("bg2.webp") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    width:100%;
+    min-height:100%;
+    box-shadow:0 0 600px 8px rgb(20, 20, 20) inset;
+    transition: 0.7s;
+    
+  }
+*:focus {
+    outline-width: 0px !important;
+    
+}
+::-webkit-input-placeholder { /* Edge */
+    letter-spacing: 5.5px;
+    padding-left: 10px;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    letter-spacing: 5.5px;
+    padding-left: 10px;
+  }
+  
+  ::placeholder {
+    letter-spacing: 5.5px;
+    padding-left: 10px;
+  }
+.container{
+    
+    text-align: center;
+}
+.nav{
+    position:absolute;
+}
+.r1{
+    display:block;
+    top:50%;
+    right:10px;
+    position:fixed;
+    background-color: white;
+    width: 8px;
+    height: 11px;
+    border-radius: 50%;
+    border: none;
+    
+}
+
+.r2{
+    display:block;
+    top:54%;
+    right:10px;
+    position:fixed;
+    background-color: white;
+    width: 8px;
+    height: 11px;
+    border-radius: 50%;
+    border: none;
+    
+}
+.r3{
+    display:block;
+    top:58%;
+    right:10px;
+    position:fixed;
+    background-color: white;
+    width: 8px;
+    height: 11px;
+    border-radius: 50%;
+    border: none;
+    
+}
+#user{
+    
+    position:fixed;
+    visibility: hidden;
+    transform: translate(-510%,-170%);
+    top:55%;
+    left:50%;
+}
+#lock{
+    
+    position:fixed;
+    visibility: hidden;
+    transform: translate(-635%,40%);
+    top:55%;
+    left:50%;
+}
+.button{
+    background-color: transparent;
+    border:2px solid white;
+    margin:15px;
+    padding:3px;
+    width:150px;
+    color:white;
+    font-size:25px;
+    margin-top:340px;
+    letter-spacing: 0.5px;
+    
+}
+.button:hover{
+    color:black;
+    background-color: white;
+    border-radius:12px;
+    transition:0.3s;
+    box-shadow:0 0 16px 8px rgba(241, 239, 239, 0.452) ;
+}
+
+.content{
+   margin-top:12px;
+   position:fixed;
+   transform: translate(-50%,-50%);
+   top:75%;
+   left:50%;
+}
+
+
+.display{
+    position:fixed;
+    
+    transform: translate(-50%,-50%);
+    top:55%;
+    left:50%;
+    
+}
+#field{
+    padding-left:60px;
+    border-radius: 15px;
+    padding:15px;
+    width:330px;
+    height:35px;
+    border:none;
+    margin:30px;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 0.8px;
+    font-size: 16px;
+}
+#field:hover{
+    transition: 0.4s;
+    box-shadow:0 0 16px 8px rgba(241, 239, 239, 0.452) ;
+}
