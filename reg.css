@@ -1,0 +1,61 @@
+.vid{
+    
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+}
+*:focus {
+    outline-width: 0px !important;
+    
+}
+.container{
+    
+    margin:0;
+    padding:0;
+}
+.style{
+    top:0;
+    left:0;
+    z-index: 1;
+    background-color: rgb(102, 11, 102);
+    min-width: 90px;
+    min-height: 100vh;
+    position: absolute;
+    box-shadow: 15px 0 80px 6px black inset;
+}
+.parent{
+    box-shadow: 0 0 80px 16px black inset;
+    transform: translate(37px,-8px);
+    min-width:532px;
+    min-height:100vh ;
+    margin:0;
+    right:0;
+    background-color: rgb(102, 11, 102);
+    text-align: center;
+    position: fixed;
+    padding:60px;
+    
+}
+.element{
+    border:none;
+    border-radius: 20px;
+    position: relative;
+    z-index:1;
+    margin:22px;
+    min-height: 35px;
+    min-width:400px;
+    padding-left:15px;
+    padding-right:15px;
+    font:arial;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+.element:active{
+    outline:none;
+}
+
+#name{
+  
+}
