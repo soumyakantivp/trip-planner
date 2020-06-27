@@ -30,8 +30,18 @@ body {
     letter-spacing: 5.5px;
     padding-left: 10px;
   }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
 .container{
-    
+    width:100%;
     text-align: center;
 }
 .nav{
@@ -49,8 +59,8 @@ body {
     border: none;
     
 }
-
 .r2{
+    
     display:block;
     top:54%;
     right:10px;
@@ -73,6 +83,13 @@ body {
     border-radius: 50%;
     border: none;
     
+}
+#backarrow{
+    position:fixed;
+    z-index:1;
+    transform: translate(-230%,235%);
+    top:55%;
+    left:50%;
 }
 #user{
     
@@ -114,19 +131,61 @@ body {
    margin-top:12px;
    position:fixed;
    transform: translate(-50%,-50%);
-   top:75%;
+   top:73%;
    left:50%;
+}
+#back{
+    visibility: hidden;
+    color:white;
+    position:fixed;
+    transform: translate(-250%,300%);
+    top:55%;
+    left:50%;
+}
+#forgot{
+    visibility: hidden;
+    color:white;
+    position:fixed;
+    transform: translate(70%,300%);
+    top:55%;
+    left:50%;
 }
 
 
 .display{
     position:fixed;
-    
     transform: translate(-50%,-50%);
     top:55%;
     left:50%;
     
 }
+.lbtn{
+    position:absolute;
+    display: flex;
+    flex-direction: row;
+    
+    height:40px;
+    transform: translate(-50%,170%);
+    top:55%;
+    left:50%;
+    
+}
+#b1{
+margin-right:15px;
+transition: 0.2s;
+}
+#b2{
+    margin-right:15px;
+    color:white;
+    font-size: 16px;
+    text-align: center;
+    z-index:1;
+    transition: 0.2s;
+}
+#b3{
+    transition: 0.2s;
+}
+
 #field{
     padding-left:60px;
     border-radius: 15px;
@@ -141,6 +200,171 @@ body {
     font-size: 16px;
 }
 #field:hover{
+  
     transition: 0.4s;
     box-shadow:0 0 16px 8px rgba(241, 239, 239, 0.452) ;
+}
+.reg{
+    
+    padding-top:55px;
+    visibility: hidden;
+  box-shadow:0 0 36px 8px rgb(20, 20, 20);
+    background-color: white;
+    width:500px;
+    height:600px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+.regelement{
+    
+    padding-right: 15px;
+    font-size:18px;
+    padding-left:0px;
+    letter-spacing: 1px;
+    width:20px;
+}
+#regname{
+    
+    border-radius:15px;
+    border:2px solid black;
+    margin:20px;
+    min-width:350px;
+
+}
+#regemail{
+    border-radius:15px;
+    border:2px solid black;
+    margin:20px;
+    min-width:350px;
+
+}
+#regphone{
+    letter-spacing: 2px;
+    border-radius:15px;
+    border:2px solid black;
+    margin:20px;
+    min-width:350px;
+
+}
+#regage{
+    border-radius:15px;
+    border:2px solid black;
+    margin:20px;
+    width:110px;
+    transform: translate(-120px,0px);
+}
+.reggender{
+    border-radius:50%;
+    margin:16px;
+    position:absolute;
+    background-color: black;
+}
+#regpassword{
+    letter-spacing: 2px;
+    border-radius:15px;
+    border:2px solid black;
+    margin:20px;
+    min-width:350px;
+
+}
+#regmale{
+    transform: translate(-75px,0px);
+}
+#regfemale{
+    transform: translate(-15px,0px);
+}
+#regother{
+    transform: translate(45px,0px);
+}
+.subbtn{
+    font:arial;
+    color:white;
+    position:absolute;
+    background-color: black;
+    border-radius: 25px;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,170px);
+}
+
+#regback{
+  
+    transform: translate(-175px,170px);
+}
+#regsupport{
+  
+    transform: translate(75px,170px);
+}
+#reguser{
+    position: absolute;
+    transform: translate(20px,23px);
+}
+#regemailimg{
+    position: absolute;
+    transform: translate(26px,95px);
+}
+#regphoneimg{
+    position: absolute;
+    transform: translate(24px,169px);
+}
+#regageimg{
+    z-index: 1;
+    position: absolute;
+    transform: translate(20px,242px);
+}
+
+#reglock{
+    
+    position: absolute;
+    transform: translate(26px,313px);
+}
+#exclaimname{
+    visibility: hidden;
+    transform: translate(370px,23px);
+    position:absolute;
+    
+}
+#exclaimemail{
+    visibility: hidden;
+    transform: translate(370px,95px);
+    position:absolute;
+}
+#exclaimphone{
+    visibility: hidden;
+    transform: translate(370px,168px);
+    position:absolute;
+}
+#exclaimage{
+    visibility: hidden;
+    z-index:1;
+    transform: translate(128px,240px);
+    position:absolute;
+}
+#exclaimgender{
+    visibility: hidden;
+    position:absolute;
+    transform: translate(370px,240px);
+}
+#exclaimpassword{
+    visibility: hidden;
+    position:absolute;
+    transform: translate(370px,313px);
+}
+#about{
+    padding-left:8px;
+    color:black;
+    left:50%;
+    transform: translate(-50%,0px);
+    bottom: 3px;
+    position: absolute;
+    letter-spacing: 12px;
+    font-size:15px;
+    font-family: arial;
+}
+#about:hover{
+    text-decoration: none;
+    
+    border-bottom: 3px solid white;
 }

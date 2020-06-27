@@ -22,12 +22,26 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="tp.js"></script>
     <div class="container">
-        
+        <div class="reg">
+            <img id="reguser" src="user2.png" width="32px" height="31px">
+            <img id="regemailimg" src="email.png" width="25px" height="28px">
+            <img id="regphoneimg" src="phone.png" width="32px" height="23px">
+            <img id="regageimg" src="age.png" width="40px" height="24px">
+            <img id="reglock" src="lock.png" width="28px" height="28px">
+            <img id="exclaimname" src="exclaim.png" width="32px" height="28px">
+            <img id="exclaimemail" src="exclaim.png" width="32px" height="28px">
+            <img id="exclaimphone" src="exclaim.png" width="32px" height="28px">
+            <img id="exclaimage" src="exclaim.png" width="32px" height="28px">
+            <img id="exclaimgender" src="exclaim.png" width="32px" height="28px">
+            <img id="exclaimpassword" src="exclaim.png" width="32px" height="28px">
+            <a id="about" href="url">ABOUT US</a>
+        </div>
         <div class="btn">
-            <button onclick="login()" class="button">log in</button><button
-                onclick="" class="button">sign up</button>
+            <button onclick="login()" class="button">log in</button><button onclick="register()" class="button">sign
+                up</button>
         </div>
         <div class="nav">
             <button class="r1" onclick="background1();rs1()"></button>
@@ -35,12 +49,23 @@
             <button class="r3" onclick="background3();rs3()"></button>
         </div>
         <form class="display">
+            <label id="back">go back</label>
+            <label id="forgot">forgot password?</label>
+
             <img id="user" src="user2.png" width="32px" height="31px">
             <img id="lock" src="lock.png" width="25px" height="28px">
+            
             <div class="lbtn"></div>
         </form>
         <div class="content">buy yourself the freedom</div>
     </div>
+
+    <script>
+        function loadmain() {
+            location.replace("tp.html");
+        }
+    </script>
+
     <script>
         function myFunction(x) {
             if (x.matches) { // If media query matches
@@ -96,7 +121,7 @@
             setTimeout("changeimage(" + every_seconds + ")", ((every_seconds) * 1000));
         }
     </script>
-
+   
 </body>
 
 </html>
